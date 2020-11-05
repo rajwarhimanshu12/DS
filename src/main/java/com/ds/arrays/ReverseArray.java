@@ -30,7 +30,6 @@ public class ReverseArray {
 	}
 	
 	public static void recursionreverse(int[] arr,int start,int end) {
-		//terminating call
 		if(start>=end) 
 			return;
 		int temp = arr[start];
