@@ -28,6 +28,16 @@ public class ReverseArray {
         for(char c: stringarr)
         System.out.print(c);
 	}
+	
+	public static void recursionreverse(int[] arr,int start,int end) {
+		//terminating call
+		if(start>=end) 
+			return;
+		int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+		recursionreverse(arr,start+1,end-1);
+	}
 	public static void main(String args[]){
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter Size");
@@ -42,5 +52,6 @@ public class ReverseArray {
 		String s= sc.next();
 		revArray(arr);
 		revString(s);
+		recursionreverse(arr,0,n-1);
 	}
 }
