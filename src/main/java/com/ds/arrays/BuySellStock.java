@@ -1,8 +1,8 @@
 package com.ds.arrays;
 
-public class BuySellStockOnce {
+public class BuySellStock {
 
-	public static void buysell(int[] arr) {
+	public static void buysellonce(int[] arr) {
 		int maxProfit=0;
 		int profit=0;
 		for(int i=0;i<arr.length-1;i++) {
@@ -20,9 +20,15 @@ public class BuySellStockOnce {
 		else	
 			System.out.println("Max Profit "+maxProfit);
 	}
+	
+	public static void buySellTwice(int[] arr) {
+		
+	}
 
 	public static void main(String args[]) {
-		int[] arr = { 7, 1, 5, 3, 6, 4 };
-		buysell(arr);
+		int[] arr = {10, 22, 5, 75, 65, 80};
+		buysellonce(arr);
+		buySellTwice(arr);
+		
 	}
 }
