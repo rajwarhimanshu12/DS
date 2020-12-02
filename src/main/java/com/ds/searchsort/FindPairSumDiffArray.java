@@ -11,7 +11,7 @@ public class FindPairSumDiffArray {
 			if(hm.containsKey(sum-arr[i])) {
 				System.out.println(arr[hm.get(sum-arr[i])]+"  "+arr[i]);
 			}
-			hm.put(sum-arr[i], i);
+			hm.put(arr[i], i);
 		}
 	}
 
