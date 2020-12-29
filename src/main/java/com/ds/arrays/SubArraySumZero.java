@@ -36,7 +36,8 @@ public class SubArraySumZero {
 	
 	public static void main(String args[]) {
 		int[] arr= {3,4,-7,-6};
-		zeroSumBruteForce(arr);
+	//	zeroSumBruteForce(arr);
+		zeroSumArrayUsingSet(arr);
 	}
 
 }

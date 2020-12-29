@@ -21,8 +21,8 @@ public class SubArraySumK {
 	}
 
 	public static void main(String[] args) {
-		int[] arr = { 2, 11, 5, 10, 7, 8 };
-		sumK(arr, 9);
+		int[] arr = { 2, 11, 5, 10, 7, 8 ,6};
+		sumK(arr, 16);
 	}
 
 }

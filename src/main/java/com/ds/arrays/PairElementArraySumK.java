@@ -9,9 +9,9 @@ public class PairElementArraySumK {
 	public static void sumK(int arr[],int sum) {
 		mergeSort(arr);
 		for(int i: arr) {
-			System.out.println(i);
-		}
-		int l=0;
+				System.out.println(i);
+			}
+			int l=0;
 		int r=arr.length-1;
 		while(l<r) {
 			if(arr[l]+arr[r]>sum) {
@@ -33,7 +33,7 @@ public class PairElementArraySumK {
 		if(arrsize<2) {
 			return;
 		}
-		int mid = arrsize / 2;
+		int mid = arrsize / 2;		
 		int leftsize = mid;
 		int rightsize = arrsize - mid;
 		int[] leftArray = new int[leftsize];
