@@ -1,4 +1,4 @@
-package com.ds.string;
+ package com.ds.string;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +22,6 @@ public class PrintAllSub {
 		printAllSubSequenceRecursion(input.substring(1),output);
 	}
 	
-
 	public static void main(String[] args) {
 		String s = "abc";
 		printallSubString(s);
