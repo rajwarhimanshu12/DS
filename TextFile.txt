@@ -1,0 +1,4 @@
+This file is created to test functions to read
+character by character
+word by word
+line by line

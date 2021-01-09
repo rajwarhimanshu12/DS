@@ -1,8 +1,5 @@
  package com.ds.string;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class PrintAllSub {
 	
 	public static void printallSubString(String s) {

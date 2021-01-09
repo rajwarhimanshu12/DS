@@ -1,16 +1,30 @@
 package com.ds.arrays;
 
+import java.util.HashMap;
+import java.util.Map;
+
 //find all pairs on integer array whose sum is equal to given number
 
-//
 
 public class PairElementArraySumK {
 	
+	public static void pairSumKHashApproach(int[] arr, int sum) {
+		Map<Integer,Integer> map = new HashMap<Integer,Integer>();
+		int complement;
+		for(int i=0;i<arr.length;i++){
+			complement = sum -arr[i];
+			if(map.containsKey(complement)) {
+				System.out.print(map.get(complement));
+				System.out.print(" "+i);
+			}
+			else
+				map.put(arr[i], i);
+			System.out.println();
+		}
+	}
+	
 	public static void sumK(int arr[],int sum) {
 		mergeSort(arr);
-		for(int i: arr) {
-				System.out.println(i);
-			}
 			int l=0;
 		int r=arr.length-1;
 		while(l<r) {
@@ -21,7 +35,7 @@ public class PairElementArraySumK {
 				l++;
 			}
 			else {
-				System.out.println(arr[l]+"    "+arr[r]);
+				System.out.println(l+"    "+r);
 				l++;  //r--;
 			}
 		}
@@ -81,6 +95,9 @@ public class PairElementArraySumK {
 		int sum= 12;
 		
 		sumK(arr,sum);
+		
+		System.out.println("Result from another approch");
+		pairSumKHashApproach(arr,sum);
 	}
 	
 	
