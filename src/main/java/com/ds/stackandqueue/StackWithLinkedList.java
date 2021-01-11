@@ -30,12 +30,13 @@ public class StackWithLinkedList {
 
 	public static void main(String[] args) {
 		StackWithLinkedList list = new StackWithLinkedList();
-		StackWithLinkedList(10);
+		
 	}
 
 	private static void StackWithLinkedList(int i) {
 		// TODO Auto-generated method stub
 		
 	}
+
 
 }

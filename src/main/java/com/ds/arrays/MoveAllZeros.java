@@ -43,12 +43,35 @@ public class MoveAllZeros {
     		System.out.print(" "+i);
     		}
     }
+	
+	
+	private static void binaryArrayMove0(int[] arr) {
+		int j = -1;
+		for(int i=0;i<arr.length;i++) {
+			if(arr[i]!=0) {
+				j++;
+				int temp = arr[j]; 
+                arr[j] = arr[i]; 
+                arr[i] = temp;
+			}
+		}
+		for(int i: arr)
+		System.out.print("  "+i);
+		
+	}
 
 	public static void main(String[] args) {
 		int arr[] = { 1, 9, 8, 4, 0, 2, 7, 0, 6, 0, 9 };
+		int arr1[] = {0,0,0,1,0,0,1,1,1,0,0};
 		move(arr);
 		System.out.println("");
 		pushZerosToEnd(arr);
+		System.out.println();
+		binaryArrayMove0(arr1);
+		System.out.println();
+		binaryArrayMove0(arr);
 	}
+
+	
 
 }

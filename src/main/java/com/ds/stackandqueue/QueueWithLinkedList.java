@@ -18,7 +18,7 @@ public class QueueWithLinkedList {
 	static int length = 0;
 	
 	public static boolean isEmpty() {
-		return length == 0;
+	 	return length == 0;
 	}
 	
 	public static void enqueue(int data) {
