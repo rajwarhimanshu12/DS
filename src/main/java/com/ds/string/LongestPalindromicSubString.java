@@ -1,4 +1,4 @@
-package com.ds.string;
+ package com.ds.string;
 
 public class LongestPalindromicSubString {
 	
@@ -51,6 +51,8 @@ public class LongestPalindromicSubString {
 		int length=0;
 		int startindex=0;
 		int endindex=0;
+		int start = 0;
+		int end = 0;
 		boolean dp[][] = new boolean[s.length()][s.length()];
 		for(int g=0;g<s.length();g++) {
 			for(int i=0,j=g;j<s.length();i++,j++) {
@@ -63,27 +65,29 @@ public class LongestPalindromicSubString {
 					else
 						dp[i][j]= false;
 				}
-				else
+				else {
 					if(s.charAt(i)==s.charAt(j) && dp[i+1][j-1] == true) {
 						dp[i][j]=true;
 					}
 					else
 						dp[i][j]=false;
-				
+				}
 				if(dp[i][j]) {
-				System.out.println(s.substring(i,j));
 				length=g+1;
+				start = i;
+				end = j;
 				}
 			}
 		}
-		System.out.println(length);
+		System.out.println(s.substring(start,end+1));
+		
 	}
 	
 	public static void main(String[] args) {
 		String s= "abccedgeegdqwe";
 		//	fun(s);
 		//countDynamicFun("abccbc");
-		longestDynamicfun("abccbc");
+		longestDynamicfun("xxabccccbac");
 	}
 
 }

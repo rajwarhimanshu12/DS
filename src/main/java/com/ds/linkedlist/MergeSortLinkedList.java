@@ -6,32 +6,44 @@ public class MergeSortLinkedList {
 	
 	static Node head = null;
 	static Node curr = null;
-	static Node tail = null;
 	
 	class Node {
-	    Object data;
+	    int data;
 	    Node next;
 	 
-	    Node(Object data){
+	    Node(int data){
 	        this.data = data;
 	        next = null;
 	    }
 	}
 	
-	public static void merge(MergeSortLinkedList lnode,MergeSortLinkedList rNode) {
-		
+	public static Node merge(Node lNode,Node rNode) {
+		if(lNode==null) {
+			return rNode;
+		}
+		if(rNode==null) {
+			return lNode;
+		}
+		if(lNode.data< rNode.data) {
+			lNode.next = merge(lNode.next,rNode);
+			return lNode;
+		}
+		else
+			rNode.next = merge(lNode,rNode.next);
+		return rNode;
 	}
 	
-	public static MergeSortLinkedList sort(Node head,Node tail) {
-		if(head==tail) {
-			MergeSortLinkedList br = new MergeSortLinkedList();
-			return null;
+	public static Node mergesort(Node head) {
+		if(head==null || head.next==null) {
+			return head;
 		}
 		Node mid = mid(head);
-		MergeSortLinkedList lNodes = sort(head,mid);
-		MergeSortLinkedList rNodes = sort(mid.next,tail);
-		merge(lNodes,rNodes);
-		return null;
+		Node midNext = mid.next;
+		mid.next = null;
+		Node left = mergesort(head);
+		Node right = mergesort(midNext);
+		Node sortedHead = merge(left,right);
+		return sortedHead;
 	}
 	
 	
@@ -60,7 +72,7 @@ public class MergeSortLinkedList {
 		
 	}
 	
-	public void print(Node node) {
+	public static void print(Node node) {
 		while(node!=null) {
 		System.out.print(node.data+"->");
 		node=node.next;
@@ -76,7 +88,9 @@ public class MergeSortLinkedList {
 		ll.Node(50);
 		ll.Node(40);
 		
-		ll.print(head);
+		print(mergesort(head));
+		
+		
 
 	}
 

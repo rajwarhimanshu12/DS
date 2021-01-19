@@ -32,9 +32,9 @@ public class SearchInsertInBst {
 	public Node search(Node root, int data) {
 		if (root == null || root.data == data)
 			return root;
-		if (root.data < data)
-			return search(root.right, data);
-		return search(root.left, data);
+		if (data<root.data)
+			return search(root.left, data);
+		return search(root.right, data);
 	}
 
 	public static void inOrderTraversal(Node root) {

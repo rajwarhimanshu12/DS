@@ -3,26 +3,26 @@ package com.ds.HeapHash;
 public class BottomUpReHeapifyMaxHeap {
 	
 	private static int[] heap;
-	private static int n;
+	private static int size;  //size of maxheap
 	
 	public BottomUpReHeapifyMaxHeap(int capacity) {
 		heap = new int[capacity+1];
-		n=0;
+		size=0;
 	}
 	 public boolean isEmpty() {
-		 return n == 0;
+		 return size == 0;
 	 }
 	 
 	 public static int size() {
-		 return n;
+		 return size;
 	 }
 	 
 	 public static void resize(int capacity) {
-		 int[] temp = new int[capacity*2];
-		 for(int i=0;i<heap.length;i++) {
-			 temp[i]=heap[i];
+		 int[] temp = new int[capacity];
+		 for(int i =0; i< heap.length ; i++) {
+			 temp[i] = heap[i];
 		 }
-		 heap = temp;
+		 heap = temp; 
 	 }
 	 
 	 public static void printHeap() {
@@ -31,20 +31,20 @@ public class BottomUpReHeapifyMaxHeap {
 		 }
 	 }
 	public static void insert(int value) {
-		if(n == heap.length) {
+		if(size == heap.length-1) {
 			resize(2*heap.length);
 		}
-		n++;
-		heap[n]=value;
-		swim(n);
+		size++;
+		heap[size]=value;
+		bottomupreheapify(size);
 	}
 	
-	public static void swim(int k) {
-		while(k>1&&heap[k/2]<heap[k]) {
+	public static void bottomupreheapify(int k) {
+		while(k>1&& heap[k]>heap[k/2]) {
 			int temp = heap[k];
 			heap[k] = heap[k/2];
-			heap[k/2]= temp;
-			k=k/2;
+			heap[k/2] = temp;
+			k = k/2;
 		}
 	}
 	

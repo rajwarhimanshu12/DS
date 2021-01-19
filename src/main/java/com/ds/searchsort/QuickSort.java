@@ -5,11 +5,10 @@ public class QuickSort {
 	
 	public void sort(int arr[],int start,int end) {
 		if(start<end) {
-			return;
-		}
 		int pivotIndex = partition(arr,start,end);
 		sort(arr,start,pivotIndex-1);
 		sort(arr,pivotIndex+1,end);
+		}
 	}
 	
 	public static int partition(int arr[],int start,int end) {

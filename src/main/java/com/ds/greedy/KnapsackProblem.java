@@ -21,12 +21,12 @@ public class KnapsackProblem {
         double finalValue = 0.0;
 		for(int i=0;i<arr.size();i++) {
 			if(currentweight+ arr.get(i).weight<=capacity) {
-				currentweight+= arr.get(i).weight;
-				finalValue+=arr.get(i).profit;
+				currentweight = currentweight + arr.get(i).weight;
+				finalValue = finalValue + arr.get(i).profit;
 			}
 			else {
 				int remain = capacity-currentweight;
-				finalValue = finalValue + arr.get(i).profit*((double)remain/(double)arr.get(i).weight);
+				finalValue = finalValue + (arr.get(i).profit/arr.get(i).weight)*remain;
 						break;
 			}
 		}
@@ -35,10 +35,11 @@ public class KnapsackProblem {
 
 	public static void main(String[] args) {
 		ArrayList<KnapsackProblem> arr = new ArrayList<KnapsackProblem>();
-		arr.add(new KnapsackProblem(1,60,10));
-		arr.add(new KnapsackProblem(2,100,20));
-		arr.add(new KnapsackProblem(3,120,30));
-		int capacity=50;
+		arr.add(new KnapsackProblem(1,10,10));
+		arr.add(new KnapsackProblem(2,2,5));
+		arr.add(new KnapsackProblem(3,1,10));
+		arr.add(new KnapsackProblem(3,3,10));
+		int capacity=20;
 		fun(arr,capacity);
 	}
 

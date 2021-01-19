@@ -65,7 +65,7 @@ public class MoveAllZeros {
 		int arr1[] = {0,0,0,1,0,0,1,1,1,0,0};
 		move(arr);
 		System.out.println("");
-		pushZerosToEnd(arr);
+		//pushZerosToEnd(arr);
 		System.out.println();
 		binaryArrayMove0(arr1);
 		System.out.println();

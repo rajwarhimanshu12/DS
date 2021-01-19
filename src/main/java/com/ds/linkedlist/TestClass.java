@@ -14,6 +14,7 @@ class Node {
 
 public class TestClass {
 
+	Node head;
      public static void printLinkedList(Node head) {
 		Node current = head;
 		if(head==null) {
