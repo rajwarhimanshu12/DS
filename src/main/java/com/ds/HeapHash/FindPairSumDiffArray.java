@@ -1,4 +1,4 @@
-package com.ds.searchsort;
+package com.ds.HeapHash;
 
 import java.util.HashMap;
 

@@ -1,4 +1,4 @@
-package com.ds.arrays;
+	package com.ds.arrays;
 
 public class MergeSortedArray {
 

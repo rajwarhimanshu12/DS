@@ -1,4 +1,4 @@
-package com.ds.arrays;
+package com.ds.HeapHash;
 
 import java.util.HashMap;
 import java.util.HashSet;
