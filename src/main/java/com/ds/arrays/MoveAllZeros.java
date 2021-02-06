@@ -48,7 +48,7 @@ public class MoveAllZeros {
 	private static void binaryArrayMove0(int[] arr) {
 		int j = -1;
 		for(int i=0;i<arr.length;i++) {
-			if(arr[i]!=0) {
+			if(arr[i]==0) {
 				j++;
 				int temp = arr[j]; 
                 arr[j] = arr[i]; 

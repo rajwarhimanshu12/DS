@@ -20,11 +20,23 @@ public class FindMaxMinArrayElement {
 		System.out.println("Min is " + min);
 	}
 
-	public void findKthMax() {
-
+	public static void find2ndMax(int arr[]) {
+        int first = 0;
+        int second = 0;
+		for(int i = 0;i< arr.length;i++) {
+        	if(arr[i]>first) {
+        		second = first;
+        		first = arr[i];	
+        	}
+        	else if(arr[i] > second && arr[i]!=first) {
+        		second = arr[i];
+        	}
+        }
+		System.out.println("FIRST"+ first);
+		System.out.println("SECOND"+ second);
 	}
 
-	public void findkthMin() {
+	public void find2ndMin(int arr[]) {
 
 	}
 
@@ -86,6 +98,7 @@ public class FindMaxMinArrayElement {
 		int arr[] = { 1, 3, 4, 16, 87, 1, 2, 5 };
 		findMax(arr);
 		findMin(arr);
+		find2ndMax(arr);
 		findkthMinMaxSorting(arr,5);
 	}
 }
