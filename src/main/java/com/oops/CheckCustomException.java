@@ -1,4 +1,4 @@
-package com.ds.misc;
+package com.oops;
 
 class customException extends Exception{
 	    customException(String s) {

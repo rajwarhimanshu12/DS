@@ -12,8 +12,7 @@ class first extends Thread {
 				e.printStackTrace();
 			}
 		}
-	}	
-	
+	}		
 }
 
 class second extends Thread{

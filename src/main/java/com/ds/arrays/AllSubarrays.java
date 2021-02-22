@@ -12,7 +12,7 @@ public class AllSubarrays {
 			}
 		}
 		
-	}
+	}	
 		
 		public static void allsubarrayrecursion(int[] arr,int start,int end) {
 			if(end==arr.length) 
