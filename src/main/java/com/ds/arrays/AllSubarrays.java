@@ -1,5 +1,5 @@
 package com.ds.arrays;
-
+//comment
 public class AllSubarrays {
 	
 	public static void allsubarray(int[] arr) {
