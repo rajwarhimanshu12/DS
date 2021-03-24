@@ -6,8 +6,6 @@ class customException extends Exception{
 	}
 }
 
-
-
 public class CheckCustomException {
 	
 	public static void ValidatePassword(String s) throws customException {

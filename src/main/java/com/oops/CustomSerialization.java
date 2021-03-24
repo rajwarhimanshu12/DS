@@ -14,5 +14,4 @@ public class CustomSerialization implements Serializable{
 		ObjectInputStream ois = new ObjectInputStream(fis);
 		ois.readObject();
 	}
-
 }
