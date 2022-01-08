@@ -15,7 +15,7 @@ public class StackWithLinkedList {
 	}
 	
 	
-	public static void pushOperation(int data) {
+	public static void pushOperation(int data) { 
 		Node temp = new Node(data);
 		temp.next=top;
 		top = temp;
